@@ -1,0 +1,51 @@
+.cards {
+  max-width: 55em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 3em;
+
+  &__orange {
+    background: $orange;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  &__cyan {
+    background: $cyan;
+  }
+
+  &__dark {
+    background: $dark;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-column: 1/-1;
+
+    &__main {
+      margin-bottom: 2em;
+    }
+
+    &__details {
+      font-size: 0.8rem;
+      max-width: 45ch;
+    }
+
+    &__orange {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 0;
+    }
+
+    &__dark {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./typorgraphy";
+@import "./base";
+@import "./card";
+
+.profile {
+  color: hsl(177, 100%, 50%);
+  text-transform: uppercase;
+}

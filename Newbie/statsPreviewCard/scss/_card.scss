@@ -1,0 +1,98 @@
+.container {
+  padding: 1.5em;
+}
+.card {
+  max-width: 1110px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: $dark-blue;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2em;
+    order: -1;
+    padding: 5.35em 7.43em 4.375em 4.6em;
+  }
+
+  &__title {
+    grid-column: 1/-1;
+
+    span {
+      color: $accent;
+      font-weight: $fw-bold;
+    }
+  }
+
+  &__body {
+    grid-column: 1/-1;
+    padding-right: 2em;
+    margin-bottom: 5.5em;
+    max-width: 50ch;
+  }
+
+  &__details {
+    text-transform: uppercase;
+  }
+
+  &__details span {
+    display: block;
+    font-size: 1.46rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: $fw-bold;
+  }
+
+  &__img {
+    background: url("/dist/img/image-header-desktop.jpg");
+    background-color: $accent;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    grid-template-rows: 400px 1fr;
+
+    &__title {
+      font-size: 1.6rem;
+    }
+    &__body {
+      margin-bottom: 3.25em;
+    }
+    &__img {
+      background: url("/dist/img/image-header-mobile.jpg");
+      background-color: $accent;
+      background-blend-mode: multiply;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-row: 1/2;
+      grid-column: 1/-1;
+    }
+
+    &__content {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 2.3em;
+    }
+
+    &__body {
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 0;
+    }
+
+    &__details {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .card {
+    grid-template-rows: 250px 1fr;
+  }
+}

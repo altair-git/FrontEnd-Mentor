@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+  background: #f2f2f2;
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 0.75em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+  margin: 0;
+}
+
+.card__title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0.67em 0;
+}
+
+.card__details {
+  font-size: 0.73rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card__main {
+  margin-bottom: 5.67em;
+}
+
+.card__btn {
+  text-decoration: none;
+  background: #f2f2f2;
+  padding: 0.6em 1em;
+  border-radius: 20px;
+}
+
+.card__btn--orange {
+  color: #e38826;
+}
+
+.card__btn--cyan {
+  color: #006970;
+}
+
+.card__btn--dark {
+  color: #004241;
+}
+
+.card__btn:hover, .card__btn:focus {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: #f2f2f2;
+}
+
+.cards {
+  max-width: 55em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 3em;
+}
+
+.card__orange {
+  background: #e38826;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.card__cyan {
+  background: #006970;
+}
+
+.card__dark {
+  background: #004241;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-column: 1/-1;
+  }
+  .card__main {
+    margin-bottom: 2em;
+  }
+  .card__details {
+    font-size: 0.8rem;
+    max-width: 45ch;
+  }
+  .card__orange {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+  }
+  .card__dark {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 0;
+  }
+}

@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 0.75em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+  margin: 0;
+}
+
+.card__title {
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+
+  span {
+    color: hsl(0, 0%, 59%);
+  }
+}
+
+.card__location {
+  margin-top: 0;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: hsl(0, 0%, 59%);
+}
+
+.card__details {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  color: hsl(0, 0%, 59%);
+  margin-bottom: 0;
+
+  span {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: hsl(229, 23%, 23%);
+  }
+}
